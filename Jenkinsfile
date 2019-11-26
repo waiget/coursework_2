@@ -17,7 +17,7 @@ pipeline {
         stage('Test') { 
             steps {
                 sh 'node server.js &'
-                sh 'sudo kill -9 `sudo lsof -t -i:8900`'
+                sh 'kill -9 `lsof -t -i:8900`'
             }
         }
     }
