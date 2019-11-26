@@ -17,8 +17,7 @@ pipeline {
         stage('Test') { 
             steps {
                 sh 'node server.js &'
-                sh 'PID=$!'
-                sh 'kill $PID'
+                sh 'sudo kill -9 `sudo lsof -t -i:8900`'
             }
         }
     }
