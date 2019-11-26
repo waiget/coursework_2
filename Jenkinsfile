@@ -16,7 +16,9 @@ pipeline {
         // }
         stage('Test') { 
             steps {
-                sh 'node server.js' 
+                sh 'node server.js &'
+                sh 'PID=$!'
+                sh 'kill $PID'
             }
         }
     }
