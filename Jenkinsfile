@@ -9,14 +9,17 @@ pipeline {
         CI = 'true' 
     }
     stages {
-        // stage('Build') {
-        //     steps {
-        //         sh 'npm install'
-        //     }
-        // }
+        stage('Build') {
+            steps {
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
         stage('Test') { 
             steps {
-                sh 'node server.js &'
+                sh 'npm run lint'
+                sh 'npm run test'
+                sh 'npm run start &'
             }
         }
     }

@@ -1,0 +1,36 @@
+{
+  "name": "coursework_2",
+  "version": "1.0.0",
+  "description": "Coursework 2 project. Uses Jenkins to auto build the project.",
+  "main": "dist/server.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint-fix": "tslint -c tslint.json -p tsconfig.json --fix",
+    "postlint": "echo Lint Successful!",
+    "test": "jest --silent --no-cache --verbose --coverage",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waiget/coursework_2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waiget/coursework_2/issues"
+  },
+  "homepage": "https://github.com/waiget/coursework_2#readme",
+  "dependencies": {
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1"
+  }
+}
