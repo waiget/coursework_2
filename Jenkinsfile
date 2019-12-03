@@ -47,7 +47,7 @@ pipeline {
         stage("Deploy to K8s") {
             steps {
                 sleep(10)
-                sh './home/master/ansible/deploy.sh'
+                sh 'ssh azureuser@13.92.243.59 "kubectl create deployment coursework2 --image=waiget/coursework2:latest"'
             }
         }
     }
