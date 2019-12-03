@@ -44,5 +44,11 @@ pipeline {
                 }
             }
         }
+        stage("Deploy to K8s") {
+            steps {
+                sleep(10)
+                sh './home/master/ansible/deploy.sh'
+            }
+        }
     }
 }
