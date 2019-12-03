@@ -8,9 +8,9 @@ let host: string;
 export const handleRequest: RequestListener = (request, response) => {
   response.setHeader("Content-Type", "text/plain");
   response.writeHead(200);
-  response.write("Hello World! | Running on: ");
+  response.write("Hello World! I have been updated by Jenkins automatically! | Running on: ");
   response.write(host);
-  response.end(" | v=1\n");
+  response.end(" | v=2\n");
   console.log("Running On:", host, "| Total Requests:", ++requests, "| App Uptime:", (+new Date() - +startTime) / 1000, "seconds", "| Log Time:", new Date());
 };
 
