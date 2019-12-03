@@ -10,5 +10,7 @@
 
 FROM node:6.14.2
 EXPOSE 8080
+CMD npm run install
+CMD npm run build
 COPY dist/server.js .
 CMD node dist/server.js
