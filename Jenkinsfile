@@ -56,7 +56,7 @@ pipeline {
                                 verbose: true,
                                 transfers: [
                                     sshTransfer(
-                                        execCommand: "kubectl set image deployments/coursework2 waiget/coursework2:${env.BUILD_ID}"
+                                        execCommand: "kubectl set image deployments/coursework2 coursework2=waiget/coursework2:${env.BUILD_ID}"
                                     )
                                 ]
                             )
