@@ -2,7 +2,6 @@ pipeline {
     environment {
         registry = 'waiget/coursework2'
         registryCredential = 'Docker'
-        dockerID = 'waiget'
         registryUrl = 'https://registry.hub.docker.com'
         CI = 'true'
     }
